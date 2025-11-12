@@ -24,7 +24,7 @@ final class FormThemeTest extends FormLayoutTestCase
     protected function getTemplatePaths(): array
     {
         return [
-            __DIR__ . '/../src/templates/form',
+            __DIR__ . '/../templates/form',
             __DIR__ . '/../vendor/symfony/twig-bridge/Resources/views/Form',
         ];
     }
