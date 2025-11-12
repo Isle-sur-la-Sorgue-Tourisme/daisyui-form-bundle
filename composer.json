@@ -1,0 +1,50 @@
+{
+  "name": "islesurlasorguetourisme/daisyui-form-bundle",
+  "description": "A Symfony form theme bundle that provides seamless DaisyUI integration for automatically generated forms",
+  "type": "symfony-bundle",
+  "keywords": [
+    "symfony",
+    "form",
+    "theme",
+    "bundle",
+    "daisyui"
+  ],
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "require": {
+    "php": ">=8.1",
+    "symfony/http-kernel": "^6.4 || ^7.0",
+    "symfony/twig-bridge": "^6.4 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5 || ^10.0",
+    "symfony/form": "^6.4 || ^7.0",
+    "symfony/intl": "^6.4 || ^7.0",
+    "symfony/security-csrf": "^6.4 || ^7.0",
+    "symfony/test-pack": "^1.0",
+    "symfony/translation": "^6.4 || ^7.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Islesurlasorguetourisme\\DaisyuiFormBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Islesurlasorguetourisme\\DaisyuiFormBundle\\Tests\\": "tests/"
+    }
+  },
+  "homepage": "https://github.com/islesurlasorguetourisme/daisyui-form-bundle",
+  "authors": [
+    {
+      "name": "Enzo Brigati",
+      "email": "ebrigati@islesurlasorguetourisme.com"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  tests:
+    name: tests (PHP ${{ matrix.php-version }}) (Symfony ${{ matrix.symfony-version }})
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      max-parallel: 10
+      fail-fast: false
+      matrix:
+        php-version: [ '8.1', '8.2', '8.3', '8.4' ]
+        symfony-version: [ '6.4.*', '7.3.*' ]
+        exclude:
+          - php-version: '8.1'
+            symfony-version: '7.3.*'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 'Set up PHP'
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: xdebug
+
+      - name: 'Install Composer dependencies'
+        env:
+          SYMFONY_REQUIRE: ${{ matrix.symfony-version }}
+        uses: ramsey/composer-install@v3
+        with:
+          composer-options: '--optimize-autoloader'
+
+      - name: 'Run PHPUnit'
+        run: composer test
