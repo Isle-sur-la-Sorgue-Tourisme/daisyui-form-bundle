@@ -1,4 +1,5 @@
 [![ci](https://github.com/Isle-sur-la-Sorgue-Tourisme/daisyui-form-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/Isle-sur-la-Sorgue-Tourisme/daisyui-form-bundle/actions/workflows/ci.yml)
+![Packagist Version](https://img.shields.io/packagist/v/islesurlasorguetourisme/daisyui-form-bundle?style=for-the-badge)
 ![SF Version](https://img.shields.io/badge/symfony-%3E%3D6.4-000?style=for-the-badge)
 ![PHP Version](https://img.shields.io/badge/php->=8.1-4f5b93.svg?style=for-the-badge)
 ![DaisyUi Version](https://img.shields.io/badge/daisyUi->=5.0-FFCE2A.svg?style=for-the-badge)
