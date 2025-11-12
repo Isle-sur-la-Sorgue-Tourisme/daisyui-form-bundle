@@ -40,7 +40,7 @@ If you're using Symfony Flex, the bundle is automatically enabled. Otherwise, ad
 ```php
 return [
     // ...
-    Isstourisme\DaisyuiFormBundle\DaisyuiFormBundle::class => ['all' => true],
+    Islesurlasorguetourisme\DaisyuiFormBundle\DaisyuiFormBundle::class => ['all' => true],
 ];
 ```
 
@@ -50,7 +50,7 @@ Add the form theme to your `config/packages/twig.yaml`:
 ```yaml
 twig:
     form_themes:
-        - '@IsstourismeDaisyuiFormBundle/Form/daisyui_form_theme.html.twig'
+        - '@DaisyuiForm/form/daisyui_layout.html.twig'
 ```
 
 ### 4. Ensure DaisyUI is installed
@@ -88,9 +88,9 @@ That's it! Your form will be rendered with beautiful DaisyUI components.
 
 ### Per-form theme override
 
-To use a different theme for a specific form:
+To use the DaisyUI theme for a specific form:
 ```twig
-{% form_theme form 'your_custom_theme.html.twig' %}
+{% form_theme form '@DaisyuiForm/form/daisyui_layout.html.twig' %}
 {{ form(form) }}
 ```
 
@@ -100,7 +100,7 @@ To use a different theme for a specific form:
 
 Create your own form theme file and extend the DaisyUI theme:
 ```twig
-{% extends '@DaisyuiForm/Form/daisyui_form_theme.html.twig' %}
+{% extends '@DaisyuiForm/form/daisyui_layout.html.twig' %}
 
 {% block form_row %}
     {# Your custom form row markup #}
