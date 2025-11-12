@@ -6,6 +6,6 @@ namespace Islesurlasorguetourisme\DaisyuiFormBundle;
 
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-final class IslesurlasorguetourismeDaisyuiFormBundle extends AbstractBundle
+final class DaisyuiFormBundle extends AbstractBundle
 {
 }

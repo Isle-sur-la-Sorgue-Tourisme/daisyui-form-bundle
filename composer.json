@@ -37,7 +37,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Islesurlasorguetourisme\\DaisyuiFormBundle\\Tests\\": "tests/"
+      "islesurlasorguetourisme\\DaisyuiFormBundle\\Tests\\": "tests/"
     }
   },
   "homepage": "https://github.com/islesurlasorguetourisme/daisyui-form-bundle",
